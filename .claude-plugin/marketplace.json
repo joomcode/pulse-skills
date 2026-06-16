@@ -1,0 +1,45 @@
+{
+  "name": "joomcode",
+  "owner": {
+    "name": "Joom",
+    "url": "https://joompulse.com"
+  },
+  "metadata": {
+    "description": "Public JoomPulse skills marketplace.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "pulse-skills",
+      "source": "./",
+      "description": "Public JoomPulse agent skills for product research and marketplace workflows.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Joom",
+        "url": "https://joompulse.com"
+      },
+      "homepage": "https://github.com/joomcode/pulse-skills",
+      "repository": "https://github.com/joomcode/pulse-skills",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": [
+        "joompulse",
+        "mercadolivre",
+        "mercadolibre",
+        "agent-skills",
+        "product-research",
+        "mcp"
+      ],
+      "keywords": [
+        "joompulse",
+        "pulse",
+        "mercadolivre",
+        "mercadolibre",
+        "agent-skills",
+        "claude-skills",
+        "mcp",
+        "product-research"
+      ]
+    }
+  ]
+}

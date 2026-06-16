@@ -1,0 +1,22 @@
+{
+  "name": "pulse-skills",
+  "description": "Public JoomPulse agent skills for product research and marketplace workflows.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Joom",
+    "url": "https://joompulse.com"
+  },
+  "homepage": "https://github.com/joomcode/pulse-skills",
+  "repository": "https://github.com/joomcode/pulse-skills",
+  "license": "MIT",
+  "keywords": [
+    "joompulse",
+    "pulse",
+    "mercadolivre",
+    "mercadolibre",
+    "agent-skills",
+    "claude-skills",
+    "mcp",
+    "product-research"
+  ]
+}
