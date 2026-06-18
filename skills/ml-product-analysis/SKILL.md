@@ -96,11 +96,16 @@ the title and attributes from the canonical product lookup, then find analogs.
 
 ### Photo route
 
-Image-based matching is primary; visual inspection is the fallback. Always tell
-the seller the results are **visually similar — not a guaranteed exact match.**
+Image-based matching is primary; visual inspection is the fallback. Accept common
+image formats, including phone formats such as HEIC/HEIF. Always tell the seller
+the results are **visually similar — not a guaranteed exact match.**
 
 1. Use the available JoomPulse image-based product search to find similar
-   listings from the photo.
+   listings from the photo. Alongside the matches, this search can return a quick
+   opportunity summary — an overall verdict on whether the product is worth
+   selling, the number of matching listings, and aggregate market stats. For a
+   fast answer you can present that summary directly (still labeled as a visual
+   match); otherwise carry the matched listings into the analog pipeline below.
 2. If image search is unavailable or returns nothing, inspect the photo yourself:
    note the product type, brand and model if legible, color, material, and key
    attributes. Turn that into search keywords and run the Keyword route. Label
@@ -160,11 +165,12 @@ total number of sellers), and links to the product on Mercado Livre and on
 JoomPulse. On the photo route, label the card as the best visual match, not an
 exact match.
 
-**Analogs table** — one row per comparable product, each with links to Mercado
-Livre and JoomPulse, the product name, price (current and historic minimum),
-estimated monthly sales and revenue, logistics, and catalog / buy-box status.
-Keep both the Mercado Livre link and the JoomPulse link for every product. You
-may translate the column headers and card labels into the seller's language.
+**Analogs table** — one row per comparable product, with the product name, brand,
+price (current and historic minimum), estimated monthly sales and revenue,
+logistics, catalog / buy-box status, number of sellers, review rating, and a
+links column holding the Mercado Livre and JoomPulse links. Keep both links for
+every product. You may translate the column headers and card labels into the
+seller's language.
 
 **Disclaimer (every report):**
 
