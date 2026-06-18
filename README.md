@@ -29,6 +29,7 @@ https://joompulse.com
 | Skill | What it does | Typical requests |
 | --- | --- | --- |
 | [`pulse-find-exact-same-product`](skills/pulse-find-exact-same-product/SKILL.md) | Finds product listings that appear to represent the same real-world product as a reference item. | "find the same product", "match this product", "find duplicate listings" |
+| [`ml-product-analysis`](skills/ml-product-analysis/SKILL.md) | Analyzes one Mercado Livre product and its competitors, returning a product card and a ranked table of comparable products with price, estimated sales and revenue, logistics, and catalog / buy-box status. | "analyze this product", "how much does this sell", "find competing products" |
 
 ## How These Skills Work
 
