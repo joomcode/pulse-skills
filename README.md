@@ -26,10 +26,10 @@ https://joompulse.com
 
 ## Skills
 
-| Skill | What it does | Typical requests |
-| --- | --- | --- |
-| [`pulse-find-exact-same-product`](skills/pulse-find-exact-same-product/SKILL.md) | Finds product listings that appear to represent the same real-world product as a reference item. | "find the same product", "match this product", "find duplicate listings" |
-| [`ml-product-analysis`](skills/ml-product-analysis/SKILL.md) | Analyzes one Mercado Livre product and its competitors, returning a product card and a ranked table of comparable products with price, estimated sales and revenue, logistics, and catalog / buy-box status. | "analyze this product", "how much does this sell", "find competing products" |
+| Skill | What it does | Typical requests | Typical requests (pt-BR) |
+| --- | --- | --- | --- |
+| [`pulse-find-exact-same-product`](skills/pulse-find-exact-same-product/SKILL.md) | Finds product listings that appear to represent the same real-world product as a reference item. | "find the same product", "match this product", "find duplicate listings" | "encontrar o mesmo produto", "achar produto igual", "encontrar anúncios duplicados" |
+| [`ml-product-analysis`](skills/ml-product-analysis/SKILL.md) | Analyzes one Mercado Livre product and its competitors, returning a product card and a ranked table of comparable products with price, estimated sales and revenue, logistics, and catalog / buy-box status. | "analyze this product", "how much does this sell", "find competing products" | "analisar este produto", "quanto vende esse produto", "encontrar produtos concorrentes" |
 
 ## How These Skills Work
 
