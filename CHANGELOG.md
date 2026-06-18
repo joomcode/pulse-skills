@@ -7,6 +7,7 @@ This project follows semantic versioning.
 ## Unreleased
 
 - Added `ml-product-analysis`.
+- Added `product-change-monitor`.
 
 ## 0.1.0 - 2026-06-16
 
