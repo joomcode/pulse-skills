@@ -3,7 +3,7 @@ name: uncontested-niche-finder
 description: >
   Finds low-competition niche products on Mercado Livre (Brasil) — active
   listings in deep sub-categories (deeper than the third level) of a chosen
-  category that have no platinum sellers, surfaced via JoomPulse. Use it when a
+  category that have no platinum seller at all, surfaced via JoomPulse. Use it when a
   seller wants uncontested niches, gaps without strong incumbents, or to know
   where they can enter without fighting a dominant platinum seller. Triggers in
   English include: "uncontested niche", "low-competition products", "categories
@@ -22,11 +22,22 @@ description: >
 
 This skill finds products in **deep sub-categories** of a chosen Mercado Livre
 (Brasil) category — sub-categories deeper than the third level — that have **no
-platinum sellers** among their listings. These are low-competition niches a
-seller can enter without fighting a dominant incumbent. Given a category by name
-or identifier, it surfaces the active listings in those deep niches, drops any
-listing held by a platinum seller, and ranks what remains by estimated traction
-so the strongest uncontested opportunities surface first.
+platinum seller at all** among their listings. These are genuinely
+platinum-free niches a seller can enter without fighting a dominant incumbent.
+Given a category by name or identifier, it surfaces the active listings in those
+deep niches, and ranks them by estimated traction so the strongest uncontested
+opportunities surface first.
+
+A truly uncontested niche is a **whole deep sub-category with zero platinum
+sellers** — not merely the non-platinum listings inside a sub-category that
+still has platinum sellers elsewhere. Dropping individual platinum-held listings
+is not enough: if any platinum seller is active in the sub-category, that niche
+is contested, so the skill keeps only the deep sub-categories that have no
+platinum seller present. If keeping only platinum-free sub-categories would leave
+too few results, the skill may also show non-platinum listings from sub-
+categories that still have platinum sellers — but it labels those plainly as
+**non-platinum listings (platinum sellers still present in the category)** and
+does not call them uncontested.
 
 This is different from broad assortment work. To decide which new products to add
 across a whole catalog, use the gap-analysis skill. To size up one product and
@@ -75,22 +86,37 @@ JoomPulse MCP setup before it can find uncontested niches.
    descendants below it, tell the user there are no deep sub-levels for it and
    offer to run on a broader category.
 
-### Step 2 — Pull the niche listings and exclude platinum sellers
+### Step 2 — Keep only the platinum-free deep sub-categories
 
 1. Use JoomPulse to list the **active product listings** in those deep
    sub-categories. For each listing collect: name, category, seller, listing
    type, seller medal, logistics (frete grátis), price, estimated **weekly**
    sales and revenue, rating, review count, time on air, and — where available —
    how many sellers compete on the listing.
-2. **Drop every listing held by a platinum seller.** Keep listings whose seller
-   medal is gold, silver, none, or empty — these are the uncontested niches.
-3. Keep the listings that are real, funded niches — those with estimated sales
-   above zero — and rank them so the strongest uncontested opportunities lead
-   (by estimated weekly revenue by default). If nothing has estimated sales, fall
-   back to listing the active non-platinum listings and say so.
-4. If the deep sub-categories exist but every listing in them is held by a
-   platinum seller, report that the niche is already contested by platinum
-   sellers and suggest a sibling category.
+2. **Decide which deep sub-categories are genuinely uncontested.** A deep sub-
+   category is uncontested only when it has **no platinum seller at all** among
+   its listings. Group the listings by their deep sub-category, check each group
+   for any platinum seller, and **keep only the sub-categories with zero platinum
+   sellers.** Do not merely drop the platinum-held listings from a sub-category
+   that still has platinum sellers — that sub-category is contested and its other
+   listings are not uncontested.
+3. From the platinum-free sub-categories, keep the listings that are real, funded
+   niches — those with estimated sales above zero — and rank them so the
+   strongest uncontested opportunities lead (by estimated weekly revenue by
+   default). If nothing has estimated sales, fall back to listing the active
+   listings in the platinum-free sub-categories and say so. These are the
+   **uncontested niches.**
+4. **If keeping only platinum-free sub-categories leaves too few results**, you
+   may additionally include the non-platinum listings from sub-categories that
+   still have platinum sellers — but present them in a clearly separate, labelled
+   group, **"non-platinum listings (platinum sellers still present in the
+   category)"**, and do **not** call them uncontested. Always lead with the
+   genuinely platinum-free niches.
+5. If every deep sub-category has at least one platinum seller (none are
+   platinum-free), report that the deep sub-categories are already contested by
+   platinum sellers, suggest a sibling category, and — if helpful — offer the
+   non-platinum listings under the labelled non-uncontested group described
+   above.
 
 ## Output
 
@@ -98,7 +124,8 @@ Respond in the seller's language. Present the result with no commentary about ho
 it was produced. The product table always renders as markdown so it reads
 cleanly in any client.
 
-**Niche table** — one row per uncontested niche product, with these columns:
+**Niche table** — one row per uncontested niche product (from the platinum-free
+deep sub-categories), with these columns:
 
 - Product / listing identifier (rendered as a JoomPulse link for the product)
 - Name
@@ -114,15 +141,22 @@ cleanly in any client.
 - Time on air
 - Free shipping (frete grátis)
 - Listing type
-- Seller medal — gold, silver, or no medal (never platinum; platinum listings
-  are excluded in Step 2)
+- Seller medal — gold, silver, or no medal (never platinum; uncontested rows
+  come only from platinum-free sub-categories per Step 2)
 - A JoomPulse link for the product
 
 Put the JoomPulse link on the product identifier in each row. When a cell is
 empty, show `—` rather than guessing. Below the table, briefly state what
-"uncontested niche" means here: sub-categories deeper than the third level, with
-**no platinum seller** among the listed products. You may translate the column
-headers into the seller's language.
+"uncontested niche" means here: sub-categories deeper than the third level that
+have **no platinum seller at all** among their listings. You may translate the
+column headers into the seller's language.
+
+**If you also include the fallback group** (non-platinum listings from sub-
+categories that still have platinum sellers, used only when the platinum-free set
+is too small), put it in a clearly separate, labelled section titled
+**"non-platinum listings (platinum sellers still present in the category)"**.
+Use the same columns, but do **not** call these rows uncontested — be explicit
+that platinum sellers are still active in those sub-categories.
 
 **Disclaimer (every report):**
 
@@ -154,13 +188,6 @@ revenue, strongest uncontested niches first, each bar labelled with a short
 product name. **Skip the bar entirely when there are fewer than four products** —
 show only the cards and the table.
 
-Apply the standard medal palette wherever a seller medal is shown: platina =
-purple, ouro = amber, prata = blue, sem medalha = white with a thin border. (In
-this skill platinum listings are excluded, so platina should not appear.) When a
-change or difference column is present, its header is a word (for example
-"Variação" or an "Era | Agora" pair), never a bare delta symbol. Show a
-🟢/🔴/🆕 legend only on a run where those symbols actually appear.
-
 **Otherwise (no inline visuals)**: render the three cards as a short text block,
 one line each, and — only when there are four or more products — a tiny text list
 of the top niches by estimated weekly revenue. **Never block on visuals**; if
@@ -174,11 +201,19 @@ The seller should never see a system or stack error — only a friendly next ste
 
 - **No deep sub-categories:** if the chosen category has no sub-levels deeper
   than the third level, say so and offer to run on a broader category.
-- **All listings are platinum:** if every listing in the deep sub-categories is
-  held by a platinum seller, report that the niche is already contested by
-  platinum sellers and suggest a sibling category.
+- **No platinum-free sub-categories:** if every deep sub-category has at least
+  one platinum seller, report that the deep sub-categories are already contested
+  by platinum sellers and suggest a sibling category. You may still offer the
+  non-platinum listings, but only under the labelled "non-platinum listings
+  (platinum sellers still present in the category)" group — never as uncontested.
+- **Too few platinum-free niches:** if the genuinely platinum-free sub-categories
+  yield too few results, you may add the non-platinum listings from sub-
+  categories that still have platinum sellers, in the separate labelled group
+  above — always lead with the platinum-free niches and never relabel the
+  fallback group as uncontested.
 - **No funded listings:** if no listing has estimated sales, list the active
-  non-platinum listings instead and say the niche has little measured traction.
+  listings in the platinum-free sub-categories instead and say the niche has
+  little measured traction.
 - **Unknown flags:** when a logistics flag such as frete grátis is unknown, show
   it as unknown — do not assume "no".
 - **Many deep sub-categories:** when the deep category set is large, gather the
