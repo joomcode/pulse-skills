@@ -65,21 +65,24 @@ Use JoomPulse to list the descendant categories below the chosen one, keeping th
 current monthly estimated revenue and sales, the number of active sellers, the
 number of products, and the month-over-month revenue growth.
 
-### Step 3 — Rank by growth
+### Step 3 — Keep the fast-growing ones
 
-Rank the deep sub-categories by **month-over-month revenue growth**, highest
-first. Use the always-positive monthly totals for size (revenue, sales,
-products); use growth only for ranking — never present a change figure as a total.
+From those deep sub-categories, **keep only the ones that are growing fast**
+(strong month-over-month revenue growth), then order the kept niches by growth,
+fastest first. Use the always-positive monthly totals for size (revenue, sales,
+products); growth is the filter that selects the niches — never present a change
+figure as a total or as a table column.
 
 ## Output
 
 Respond in the seller's language (default pt-BR), with no commentary about how the
 result was produced. The ranking always renders as a markdown table:
 
-| Categoria | Vendedores | Receita (mês est.) | Vendas (mês est.) | Produtos | Crescimento |
-|---|--:|--:|--:|--:|--:|
+| Categoria | Qtd. vendedores | Receita (mês est.) | Vendas (mês est.) | Produtos |
+|---|--:|--:|--:|--:|
 
-- **Crescimento** is the month-over-month revenue growth; mark it 🟢 when high.
+- Exactly these five columns — fast growth is the filter that selects the niches,
+  not a displayed column.
 - Each category links to its JoomPulse category dashboard page.
 
 **Disclaimer (every report):**
