@@ -62,13 +62,16 @@ rank and its competing-product count. Sort by rank, best position first.
 ## Output
 
 Respond in the seller's language (default pt-BR). The keywords always render as a
-markdown table, sorted by position:
+markdown table, sorted by position. The headers below are the pt-BR default and
+may be rendered in the seller's language:
 
 | Posição | Palavra-chave | Produtos (oferta) |
 |--:|---|--:|
 
 - **Posição** — the keyword's rank in the category's search trends.
-- **Produtos (oferta)** — how many products compete for that keyword.
+- **Produtos (oferta)** — the number of active offers (listings) matching that
+  keyword, i.e. how many products currently compete for it. This is a real
+  search-trend count, not an estimate.
 
 Close with a short, optional takeaway (use the top terms in titles and ads; a high
 competing-product count means a crowded term, a low one a more open opportunity).
@@ -92,8 +95,7 @@ When inline visuals are available:
   terms. Render the chart only when there are enough keywords (skip under about
   five).
 
-Presentation rules: render a chart only when the data supports it; any column with
-movement uses a word header, never a bare "Δ".
+Presentation rules: render a chart only when the data supports it.
 
 ## Notes & Guardrails
 
