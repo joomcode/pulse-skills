@@ -1,15 +1,15 @@
 ---
 name: my-product-vs-catalog
 description: >
-  Compares the seller's own Mercado Livre listing against every other seller of
-  the same catalog product — the buy-box competition — and says where they win,
+  Compares the seller's own Mercado Livre listing against the available competing
+  listings of the same catalog product — the buy-box competition — and says where they win,
   lose, and what to fix first. Use it when a seller asks why they don't win the
   buy-box, why they don't sell despite the same product, or how they rank inside a
   catalog, given a Mercado Livre or JoomPulse link or a listing or catalog product
   identifier. It scores each parameter — price, free shipping, Full, listing type,
-  reviews, rating, seller reputation, official store — as Melhor, Na média, Pior, or
-  Criticamente pior, and returns a verdict, a comparison table, prioritized actions,
-  and a spreadsheet, with an optional weekly monitor. Triggers include "why don't I
+  seller reputation, official store — as Melhor, Na média, Pior, or Criticamente
+  pior, presents reviews and rating as context, and returns a verdict, a comparison
+  table, prioritized actions, and a spreadsheet. Triggers include "why don't I
   win the buy-box" and the pt-BR "por que não ganho o buy-box". Mercado Livre
   (Brasil) only; sales and revenue are JoomPulse estimates, not real transactions.
   For a product and its competitors, use the single-product analysis skill; for one
@@ -19,15 +19,16 @@ description: >
 # Mercado Livre — My Product vs. Catalog (Buy-Box Competitiveness)
 
 This skill compares the seller's **own** Mercado Livre (Brasil) listing against
-**every other seller offering the same catalog product** — the sellers competing
+**the available competing listings of the same catalog product** — the sellers competing
 for the same buy-box — and tells the seller, in pt-BR, where they win, where they
 lose, and **what to fix first** to win the buy-box and convert more.
 
 Given a product by a Mercado Livre link, a JoomPulse link, a Mercado Livre listing
 identifier, or a catalog product identifier, it identifies the seller's listing and
-the catalog it belongs to, gathers the full set of competing listings, and produces
+the catalog it belongs to, gathers the available competing listings, and produces
 a short verdict, a comparison table, a prioritized list of improvements, and a
-downloadable spreadsheet.
+downloadable spreadsheet. The comparison covers the available competing listings;
+when a large catalog is sampled, it says so.
 
 This is different from the sibling skills. To size up a single product and find the
 products that compete with it, use the single-product analysis skill. To track how
@@ -78,7 +79,7 @@ JoomPulse MCP setup before it can compare a listing against its catalog.
    it (see Status levels below).
 4. **Prioritize.** Sort the gaps by how much they cost: buy-box and conversion
    levers first, quick wins ahead of slow ones — which naturally yields the order
-   price → logistics → photos → reviews/reputation.
+   price → logistics → reputation.
 
 ## Parameters Compared
 
@@ -89,10 +90,10 @@ JoomPulse MCP setup before it can compare a listing against its catalog.
 - **Mercado Envios Full** — same, since Full strongly influences exposure and the
   buy-box.
 - **Listing type** — Premium / Clássico / Grátis tier, versus the catalog.
-- **Reviews and rating** — note that on catalog products these are shared across all
-  sellers of the same product, so they usually do not differentiate competitors; the
-  skill says so instead of treating a shared number as an advantage.
-- **Photos** — best-effort count versus the strongest listings.
+- **Reviews and rating** — on catalog products these are usually shared across all
+  sellers of the same product, so they are generally not comparable between
+  competitors. Present them as context, not as a scored Melhor/Pior dimension,
+  instead of treating a shared number as an advantage.
 - **Seller reputation and medal** — versus the buy-box winner and the catalog.
 - **Official store** — whether the seller or the buy-box winner is an official store
   (shown when relevant).
@@ -121,18 +122,17 @@ Respond in pt-BR, leading with the verdict:
    for competitiveness first, then quick wins, then the long-term levers.
 4. **Competitors (optional)** — a short table of competing listings, cheapest first,
    flagging the buy-box winner.
-5. **Disclaimer** — sales and revenue are JoomPulse estimates, not real transactions;
-   price, rating, reviews, logistics, and seller data are real Mercado Livre data.
+5. **Disclaimer** — include the bilingual estimate notice below.
 6. **Downloads** — offer the comparison as a downloadable spreadsheet.
 
-## Weekly Monitoring
+**Disclaimer (every report):**
 
-If the seller wants ongoing tracking, offer to set up a weekly monitor through the
-scheduling skill. Each week it repeats the comparison for the same catalog product
-and reports, in pt-BR: what changed, where the seller improved or worsened, which
-catalog member overtook them (took the buy-box or newly undercut their price), and
-the current top actions. On the first run there is no baseline yet — deliver the
-normal analysis and note that the trend starts the following week.
+> ⚠️ Sales and revenue are JoomPulse **estimates** based on historical listing
+> data — they are **not** actual transactions. Price, rating, reviews, logistics,
+> and seller data are real Mercado Livre data. / Vendas e receita são
+> **estimativas** do JoomPulse com base no histórico de anúncios — **não são
+> transações reais**. Preço, classificação, avaliações, logística e dados do
+> vendedor são dados reais do Mercado Livre.
 
 ## Edge Cases
 
