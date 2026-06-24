@@ -57,10 +57,23 @@ broad area; if they do and the term is ambiguous, disambiguate before continuing
 ### Step 2 — Find fast-growing international products marketwide
 
 Use JoomPulse to get active **international (imported)** listings across
-categories. There is no single "fast growth" flag, so define it pragmatically and
-**state the rule you used** — for example, recently listed items with strong
-estimated weekly sales, or the top items by estimated weekly revenue. Keep a
-clearly stated **top-N** (for example top 30) and say it is a top-N.
+categories. There is no single "fast growth" flag, so it must be defined from a
+real momentum proxy — **revenue alone is not growth**, and ranking by it surfaces
+old, high-ticket slow movers rather than rising items.
+
+**Default fast-growth rule (always apply and disclose):** an item is "fast-growing"
+only when it is **recently listed (low time on air)** *and* has **strong estimated
+weekly sales (and/or estimated weekly revenue)** — that is, it gained real traction
+in a short time. Rank the shortlist by that momentum (estimated weekly sales/revenue
+relative to how recently it was listed), not by revenue on its own. **State this
+rule in the output.**
+
+Keep a clearly stated **top-N** (for example top 30) and say it is a top-N.
+
+**Fallback (not "growth"):** if recency data is unavailable, you may instead show
+the **top international items by estimated weekly revenue** — but label it plainly
+as a *top-by-revenue fallback*, never call it "fast-growing" or "growth", and say
+the momentum rule could not be applied.
 
 ## Output
 
@@ -72,13 +85,18 @@ differentiator):
 |---|---|---|---|--:|--:|--:|--:|--:|--:|:--:|:--:|---|---|
 
 - The **MLB** identifier links to the item's JoomPulse page.
-- State the fast-growth rule and the top-N cap you applied, in one short line.
+- State the fast-growth rule — recently listed **and** strong estimated weekly
+  sales/revenue, ranked by that momentum — and the top-N cap you applied, in one
+  short line. If you used the top-by-revenue fallback instead, say so and do not
+  call it growth.
 
 **Disclaimer (every report):**
 
-> ⚠️ Vendas e receita são estimativas do JoomPulse com base no histórico de
-> anúncios — não são transações reais. Preço, classificação e avaliações são
-> histórico real do Mercado Livre.
+> ⚠️ Sales and revenue are JoomPulse **estimates** based on historical listing
+> data — they are **not** actual transactions. Price, rating, and reviews are
+> real Mercado Livre history. / Vendas e receita são **estimativas** do JoomPulse
+> com base no histórico de anúncios — **não são transações reais**. Preço,
+> classificação e avaliações são histórico real do Mercado Livre.
 
 ## Visualization
 
