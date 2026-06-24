@@ -1,20 +1,16 @@
 ---
 name: international-product-matcher
 description: >
-  Finds fast-growing international (imported) products inside a Mercado Livre
-  (Brasil) category and matches each one to a JoomPro product so the seller can
-  source and import it. Every row gets an import action plus a JoomPro link and a
-  JoomPulse link, alongside price, estimated weekly sales and revenue, rating,
-  reviews, time on air, shipping, listing type and seller medal. Use it when a
-  seller wants imported winners in a category AND a concrete way to buy them on
-  JoomPro. Triggers include: "find international products and match them to
-  JoomPro", "imported winners I can source", "match these to JoomPro with an
-  import button", and the pt-BR equivalents "produtos internacionais para importar
-  na JoomPro", "achar internacionais e casar com a JoomPro", "produtos importados
-  com botão importar". Sales and revenue are JoomPulse estimates, not real
-  transactions. For international products with only a general JoomPro link, use
-  the single-category international skill; for an all-categories sweep, use the
-  all-categories international skill.
+  Finds fast-growing international (imported) products inside one Mercado Livre
+  (Brasil) category and matches each to a JoomPro product so the seller can
+  source and import it. Use it when a seller wants imported winners in a category
+  AND a concrete way to buy them on JoomPro. Triggers include "find international
+  products and match them to JoomPro", "imported products I can source", and the
+  pt-BR equivalents "produtos internacionais para importar na JoomPro", "achar
+  internacionais e casar com a JoomPro". Sales and revenue are JoomPulse
+  estimates, not real transactions. For international products with only a general
+  JoomPro link, use the single-category international skill; for an all-categories
+  sweep, use the all-categories international skill.
 ---
 
 # International Product Matcher
@@ -61,29 +57,40 @@ a category, disambiguating with the seller when needed.
 ### Step 2 — Find fast-growing international products
 
 Use JoomPulse to get the active **international (imported)** listings in the
-category and keep the fast-growing shortlist, **stating the rule you used**
-(for example, recent items with strong estimated weekly sales, or the top items
-by estimated weekly revenue).
+category, then apply this **fixed fast-growth rule** (do not improvise — always
+use this so runs are reproducible):
+
+- **Fast growth = recently listed + strong sales.** Keep listings that are
+  recent (low time on air, i.e. listed in the last 30 days) AND have strong
+  estimated weekly sales/revenue, ranked by estimated weekly revenue (highest
+  first).
+- **Fallback ordering:** if too few listings meet the "recent" cut, fall back to
+  the **top 10 international listings by estimated weekly revenue** and label the
+  table as a fallback ranking so the seller knows the recency filter was relaxed.
+
+Take the **top 10** items either way. State which rule produced the list (primary
+fast-growth rule or fallback by estimated weekly revenue).
 
 ### Step 3 — Match each to JoomPro
 
 For each shortlisted item, search JoomPro by the product title to find the
-matching source product, and build a per-item JoomPro link. When no confident
-match is found, fall back to a general JoomPro search link — never invent a
-specific product reference.
+matching source product. Give a **per-item JoomPro link only when the match is
+confident**. When no confident match is found, show `—` and fall back to a
+general JoomPro search link — never invent or link a specific product reference.
 
 ## Output
 
 Respond in the seller's language (default pt-BR). This skill is action-oriented:
 there is **no chart**. The deliverable is a markdown product table:
 
-| MLB | Nome | Vendedor | Preço | Vendas (semana) | Receita (semana) | Classificação | Avaliações | Tempo no ar | Frete grátis | Mercado Envios Full | Tipo de anúncio | Medalha | Importar | JoomPro |
-|---|---|---|--:|--:|--:|--:|--:|--:|:--:|:--:|---|---|:--:|:--:|
+| MLB | Nome | Vendedor | Preço | Vendas (semana) | Receita (semana) | Classificação | Avaliações | Tempo no ar | Frete grátis | Mercado Envios Full | Tipo de anúncio | Medalha | Importar na JoomPro |
+|---|---|---|--:|--:|--:|--:|--:|--:|:--:|:--:|---|---|:--:|
 
 - **MLB** links to the item's JoomPulse page.
-- **Importar** is the per-item JoomPro link (the source product), or a general
-  JoomPro search link when no confident match exists.
-- **JoomPro** repeats the JoomPro link for clarity.
+- **Importar na JoomPro** is a single import/source column: a per-item JoomPro
+  link **only when there is a confident match**. When no confident match exists,
+  show `—` plus a general JoomPro search link — never link to a specific JoomPro
+  product reference you are not sure of.
 
 **Disclaimer (every report):**
 
