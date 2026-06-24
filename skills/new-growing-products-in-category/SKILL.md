@@ -92,14 +92,18 @@ Respond in the seller's language. Present the result with no commentary about ho
 it was produced. Use plain markdown so it renders cleanly in any client.
 
 Lead with a short intro line naming the category and the three thresholds
-actually applied.
+actually applied, and state that the listings are **ranked by estimated monthly
+sales** (ties broken by estimated weekly revenue).
 
-**Product table** — one row per surviving listing, in this order:
+**Product table** — one row per surviving listing, ranked by estimated monthly
+sales, in this order:
 
 - Listing identifier (the Mercado Livre code), linked to its JoomPulse page
 - Name
 - Seller
 - Price
+- Estimated sales (monthly) — the ranking metric and the figure behind the
+  monthly-sales traction filter
 - Estimated sales (weekly)
 - Estimated revenue (weekly)
 - Rating
