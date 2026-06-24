@@ -2,7 +2,7 @@
 name: top-sellers-in-category
 description: >
   Ranks the top sellers in one Mercado Livre (Brasil) category by estimated
-  average revenue — a single point-in-time leaderboard, no week-over-week diffs —
+  average monthly revenue — a single point-in-time leaderboard, no week-over-week diffs —
   using JoomPulse. For each seller it shows estimated average sales and revenue,
   completed sales over the last 365 days, cancellation rate, sales trend, brands,
   product distribution (all and with sales), international shipping, and classic
@@ -20,9 +20,10 @@ description: >
 # Top Sellers In Category
 
 This skill returns the **top sellers in one Mercado Livre (Brasil) category**,
-ranked by estimated average revenue — a single snapshot, with no week-over-week
-movement. For each seller it shows estimated average sales and revenue, completed
-sales over the last 365 days, cancellation rate, sales trend, brands, how their
+ranked by estimated average monthly revenue — a single snapshot, with no
+week-over-week movement. For each seller it shows estimated average monthly sales
+and revenue, completed sales over the last 365 days, cancellation rate, sales
+trend, brands, how their
 products split between all listings and listings with sales, international
 shipping, and classic versus premium listing counts.
 
@@ -36,9 +37,10 @@ sellers, use the brand-position tracker.
 - JoomPulse MCP access is configured for the current agent environment.
 - The user names a category (free text is fine).
 - The available JoomPulse tools can find the sellers active in a category and
-  return each seller's profile (estimated average sales and revenue, last-365-day
-  completed sales, cancellation rate, sales trend, brands, listing distribution,
-  international shipping, classic and premium listing counts, medal, reputation).
+  return each seller's profile (estimated average monthly sales and revenue,
+  last-365-day completed sales, cancellation rate, sales trend, brands, listing
+  distribution, international shipping, classic and premium listing counts).
+  Seller medal — used to color the chart — and reputation are read when available.
 
 If JoomPulse MCP access is unavailable, stop and explain that the skill requires
 JoomPulse MCP setup before it can rank a category's sellers.
@@ -60,7 +62,7 @@ JoomPulse MCP setup before it can rank a category's sellers.
 Ask for a category if none was given, then use JoomPulse to match the free text to
 a category and find the sellers active in it.
 
-### Step 2 — Rank by estimated average revenue
+### Step 2 — Rank by estimated average monthly revenue
 
 Rank the sellers by **estimated average monthly revenue**, highest first. Keep a
 sensible top (for example top 50, offer more on request), and treat the count as a
@@ -71,7 +73,7 @@ cap — show fewer if fewer exist.
 Respond in the seller's language (default pt-BR). The leaderboard always renders as
 a markdown table:
 
-| Vendedor | Vendas méd. | Receita méd. | Vendas 365d | Cancel rate | Sales trend | Marcas | Produtos (todos) | Produtos (com venda) | Envio internacional | Classic | Premium |
+| Vendedor | Vendas méd. (mês) | Receita média (mês) | Vendas 365d | Cancel rate | Sales trend | Marcas | Produtos (todos) | Produtos (com venda) | Envio internacional | Classic | Premium |
 |---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
 
 - The **Vendedor** name links to the seller's JoomPulse page.
@@ -94,7 +96,7 @@ When inline visuals are available:
 - **Four cards:** number of sellers in the category (and how many have sales), the
   leader's share of the shortlist's revenue, the average monthly revenue across
   the top, and the average ticket.
-- **A horizontal bar** of the top ~10 sellers by estimated average revenue,
+- **A horizontal bar** of the top ~10 sellers by estimated average monthly revenue,
   **colored by seller medal** — platina = purple, ouro = amber, prata = blue, sem
   medalha = white with a thin border (white needs the border to stay visible on a
   light background). Include a small legend mapping color to medal. When one seller
