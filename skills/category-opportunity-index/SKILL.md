@@ -167,8 +167,9 @@ When inline visuals are available, present in one panel:
 
 - **Opportunity badge** at the top: Alta 🟢 / Média 🟡 / Baixa 🔴 (show `—` if
   missing).
-- **Four metric cards:** estimated monthly GMV, estimated monthly sales, active
-  sellers, and average ticket — pt-BR formatted, money with `R$`.
+- **Five metric cards:** estimated monthly GMV, estimated monthly sales, active
+  sellers, active listings, and average ticket — pt-BR formatted, money with
+  `R$`. These match the five rows of the monthly indicators table.
 - **12-month trend line** of estimated monthly GMV (one point per month, x = mês,
   y = GMV; optionally a second series for estimated sales). Render this chart
   only when the data supports it — skip it entirely when there are fewer than
@@ -187,7 +188,7 @@ where those symbols actually appear — never on a first or baseline run. Render
 chart only when the underlying data supports it, and skip it otherwise.
 
 On a text-only surface, render the same information as markdown and text: the
-badge as a heading line, the four metrics as the indicators table or text cards,
+badge as a heading line, the five metrics as the indicators table or text cards,
 the trend as one short line describing the ~12-month direction (only when there
 are at least about six months of history), the monopolization as a text
 percentage (for example `Monopolização: 38% (baixa — bom)`), and the seasonality
