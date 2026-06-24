@@ -81,8 +81,11 @@ seller medal.
 
 - Defensively drop any row whose rating is above the threshold, and ignore rows
   with no rating at all unless the user asks to include them.
-- **Rank by demand**, highest first, so the high-demand, low-quality products
-  surface at the top (use estimated weekly revenue as a tiebreaker).
+- **Rank by estimated monthly demand**, highest first, so the high-demand,
+  low-quality products surface at the top (use estimated weekly revenue as a
+  tiebreaker). This monthly-demand figure is the ranking metric, so it must
+  appear as its own column in the table — never rank on a number the table does
+  not show.
 - Keep roughly the top 20–30 rows for the table.
 
 ## Output
@@ -99,6 +102,8 @@ default):
 - Categoria (category)
 - Vendedor (seller)
 - Preço (price)
+- Demanda estimada (mês) — estimated monthly demand (**this is the ranking
+  metric**; rows are sorted by this column, highest first)
 - Vendas estimadas (semana) — estimated weekly sales
 - Receita estimada (semana) — estimated weekly revenue
 - Classificação (rating)
@@ -111,8 +116,8 @@ default):
 - A JoomPulse link for the product
 
 Below the table, state the inputs used (the category and the rating threshold) and
-that rows are ranked by estimated demand. When a cell has no value, show `—`;
-never guess or fabricate.
+that rows are ranked by **estimated monthly demand** (the "Demanda estimada (mês)"
+column). When a cell has no value, show `—`; never guess or fabricate.
 
 **Disclaimer (every report):**
 
@@ -156,9 +161,19 @@ Presentation rules:
 
 The seller should never see a system or stack error — only a friendly next step.
 
-- **No products at or below the threshold:** say the category has no products at
-  or below that rating and suggest raising the threshold (for example to `4.5`).
-  This is a valid result, not an error — keep it friendly.
+- **No products at or below the threshold:** say the category has few or no
+  low-rated-but-selling products at the chosen threshold — this is a valid result,
+  not an error, so keep it friendly. Make the next-step suggestion **relative to
+  the threshold they picked**, never a blanket "lower the rating":
+  - If the threshold is **low** (a strict bound, e.g. `≤ 3.0` or `≤ 3.5`), few
+    products are rated that poorly — suggest **raising** the threshold (e.g. to
+    `4.0`) to widen the search to more weak-but-selling listings.
+  - If the threshold is already **high** (a loose bound, e.g. `≥ 4.5`), most
+    listings already qualify, so an empty result more likely means little demand
+    in this category — suggest **lowering** the threshold to focus on the truly
+    weak-rated products, or trying a different category.
+  Always frame it as adjusting the threshold in the sensible direction for the
+  value they gave.
 - **Category not found or ambiguous:** ask the user to confirm the exact category
   or to provide its category identifier.
 - **Market data temporarily unavailable:** retry once quietly; if it is still
