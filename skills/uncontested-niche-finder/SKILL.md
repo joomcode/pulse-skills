@@ -12,9 +12,8 @@ description: >
   disputado", "onde entrar sem briga", "subcategorias sem platinum". It returns
   one table of niche products, each with a competition signal (number of sellers)
   and a JoomPulse link. Sales and revenue are JoomPulse estimates, not real
-  transactions; price, rating, and reviews are real history. For whole-assortment
-  expansion, use the gap-analysis skill; for one product and its competitors, use
-  the single-product analysis skill; for fast-growing deep categories rather than
+  transactions; price, rating, and reviews are real history. For one product and
+  its competitors, use the single-product analysis skill; for fast-growing deep categories rather than
   products, use the growing-leaf-category skill.
 ---
 
@@ -39,8 +38,7 @@ categories that still have platinum sellers — but it labels those plainly as
 **non-platinum listings (platinum sellers still present in the category)** and
 does not call them uncontested.
 
-This is different from broad assortment work. To decide which new products to add
-across a whole catalog, use the gap-analysis skill. To size up one product and
+This is different from broad assortment work. To size up one product and
 the products that compete with it, use the single-product analysis skill. To find
 the fast-growing deep **categories** under a category (rather than the products
 inside them), use the growing-leaf-category skill. This skill answers "where can
