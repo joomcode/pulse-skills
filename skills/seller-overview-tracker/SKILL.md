@@ -13,10 +13,9 @@ description: >
   seller", "compare this seller with last period", and the pt-BR equivalents
   "monitorar este vendedor", "acompanhar esta loja", "o que mudou nesse vendedor",
   "comparar este vendedor com o período anterior". Sales and revenue are JoomPulse
-  estimates, not real transactions. For ranking many sellers in a category at one
-  point in time, use the category seller-ranking skill; for tracking a category's
-  top-100 movers, use the category top-100 change-tracker skill; for analyzing a
-  single product, use the single-product analysis skill. Mercado Livre (Brasil) only.
+  estimates, not real transactions. For ranking many sellers in a category and
+  tracking how that ranking moves, use the top-sellers-in-category skill; for
+  analyzing a single product, use the single-product analysis skill. Mercado Livre (Brasil) only.
 ---
 
 # Seller Overview Tracker
@@ -32,9 +31,8 @@ the two and shows the difference per metric. **The baseline is whatever table th
 user provides — there is no hidden session memory and nothing is stored
 server-side.** The seller is identified by a store link or a seller identifier.
 
-It is different from ranking work: to rank many sellers in a category at a single
-point in time, use the category seller-ranking skill; to track a category's top-100
-movers, use the category top-100 change-tracker skill; to analyze one product, use
+It is different from ranking work: to rank many sellers in a category and track how
+that ranking moves, use the top-sellers-in-category skill; to analyze one product, use
 the single-product analysis skill. This skill follows **one** seller.
 
 ## Prerequisites
