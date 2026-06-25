@@ -62,10 +62,10 @@ a category, disambiguating with the seller when several plausible matches return
 ### Step 2 — Find fast-growing international products
 
 Use JoomPulse to get the active **international (imported)** listings in the
-category. There is no single "fast growth" flag, so define it pragmatically and
-**state the rule you used** — for example, recently listed items (low time on air)
-with strong estimated weekly sales, or simply the top items by estimated weekly
-revenue over a recent window. Keep the shortlist (about 10).
+category. There is no single "fast growth" flag, so use a clear momentum proxy
+and **state the rule you used**: recently listed items (low time on air) with
+strong estimated weekly sales or revenue. Do not label a list as fast-growing
+when it is ranked by revenue alone. Keep the shortlist (about 10).
 
 ## Output
 
