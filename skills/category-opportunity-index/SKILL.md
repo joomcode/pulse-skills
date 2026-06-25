@@ -12,8 +12,7 @@ description: >
   oportunidade", "vale a pena entrar nessa categoria", "tamanho de mercado da
   categoria". Sales and revenue are JoomPulse estimates, not real transactions.
   For ranking the sellers in a category, use the top-sellers skill; for trending
-  search terms, use the top-keywords skill; to find specific products to add to
-  an assortment, use the gap-analysis skill; for week-over-week category
+  search terms, use the top-keywords skill; for week-over-week category
   aggregates, use the category-monitor skill.
 ---
 
@@ -29,8 +28,7 @@ interprets the opportunity level together with how concentrated the market is
 
 This is a point-in-time snapshot, not a tracker. To rank the sellers inside a
 category, use the top-sellers skill. For the trending search terms shoppers use
-in a category, use the top-keywords skill. To find specific products to add to
-an assortment, use the gap-analysis skill. To watch a category's aggregates
+in a category, use the top-keywords skill. To watch a category's aggregates
 change week over week, use the category-monitor skill. This skill answers "how
 attractive is this category right now?" for a category the user names.
 
