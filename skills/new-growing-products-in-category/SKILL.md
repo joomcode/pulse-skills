@@ -13,8 +13,7 @@ description: >
   (Brasil) only; sales and revenue are JoomPulse estimates, not real transactions,
   while price, rating, and review count are real history. For weak-rated but
   well-selling products to beat, use the high-demand low-quality skill; for
-  whole-catalog expansion, use the gap-analysis skill; for tracking one product
-  over time, use the product change-monitor skill.
+  tracking one product over time, use the product change-monitor skill.
 ---
 
 # New & Growing Products in a Category
@@ -27,8 +26,7 @@ page so the seller can dig deeper.
 
 This is a discovery snapshot, not a tracker and not a whole-catalog audit. For
 products that sell well but are poorly rated — gaps you can enter with a better
-offer — use the high-demand low-quality skill. To decide which new products to
-add across a whole catalog, use the gap-analysis skill. To follow how one product
+offer — use the high-demand low-quality skill. To follow how one product
 moves over time, use the product change-monitor skill. This skill answers "which
 fresh entrants in this niche are already getting traction right now?"
 
