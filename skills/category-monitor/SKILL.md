@@ -13,7 +13,7 @@ description: >
   pt-BR equivalents "monitorar esta categoria", "o que mudou na categoria", "comparar a categoria com
   o período anterior", "variação de vendas e vendedores da categoria". Sales and revenue are JoomPulse
   estimates, not real transactions. To track one named product over time, use the product-change-monitor
-  skill; for a one-shot opportunity / market-size snapshot, use the opportunity-index skill.
+  skill; for a one-shot opportunity / market-size snapshot, use the category-opportunity-index skill.
 ---
 
 # Category Monitor
@@ -30,7 +30,7 @@ server-side.** The default view is the whole category; the user may instead poin
 listing or a catalog product (a catalog product rolls up its competing listings).
 
 To track one named product over time, use the product-change-monitor skill. For a one-shot
-opportunity / market-size snapshot, use the opportunity-index skill.
+opportunity / market-size snapshot, use the category-opportunity-index skill.
 
 ## Prerequisites
 
