@@ -8,6 +8,7 @@ This project follows semantic versioning.
 
 - Added `ml-product-analysis`.
 - Added `product-change-monitor`.
+- Added `my-product-vs-catalog`.
 
 ## 0.1.0 - 2026-06-16
 
