@@ -8,7 +8,20 @@ sellers and teams.
 
 ## Install
 
-In Claude Code, add the marketplace and install the plugin:
+### Via link
+1. Copy this repository's link from your browser.
+2. Paste the link into Claude chat or Claude Cowork.
+3. Tell Claude: "Download all skills from this repository." Claude will give you `.zip` files.
+4. Import them in the **Customize** tab → **Skills** → **"+"** button → **Add new skill** → **Upload skill**, then choose the `.zip` files from your file manager.
+
+![Open the Customize tab](assets/install/customize.png)
+
+![Open Skills](assets/install/skills.png)
+
+![Create skill, then Upload a skill and choose your .zip files](assets/install/add_new_skill.png)
+
+### Via Claude terminal
+If you have the Claude terminal installed, run these commands in it one at a time:
 
 ```bash
 /plugin marketplace add joomcode/pulse-skills
