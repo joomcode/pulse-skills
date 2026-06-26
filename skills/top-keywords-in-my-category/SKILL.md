@@ -11,8 +11,8 @@ description: >
   "termos em alta na categoria", "o que as pessoas pesquisam", "melhores
   palavras-chave para meus anúncios". The keywords and ranks are real search-trend
   data, not estimates. For category market size and opportunity, use the
-  opportunity-index skill; for ranking the sellers in a category, use the
-  top-sellers skill.
+  category-opportunity-index skill; for ranking the sellers in a category, use the
+  top-sellers-in-category skill.
 ---
 
 # Top Keywords In My Category
@@ -24,8 +24,8 @@ seller what to put in titles and ads and where demand is concentrated.
 
 Unlike most JoomPulse skills, the data here is **real search-trend data, not an
 estimate**. For a category's market size and opportunity index, use the
-opportunity-index skill. For the sellers ranked inside a category, use the
-top-sellers skill.
+category-opportunity-index skill. For the sellers ranked inside a category, use the
+top-sellers-in-category skill.
 
 ## Prerequisites
 
