@@ -30,12 +30,29 @@ If you have the Claude terminal installed, run these commands in it one at a tim
 
 After installation, start a new session so the skill metadata is loaded.
 
-## Prerequisites
+## Connect the JoomPulse MCP (required)
 
-The skills in this repository require JoomPulse MCP access. For product context,
-account setup, and access requests, use the public JoomPulse site:
+To use these skills you first need to connect the **JoomPulse MCP** — it provides the live market data they run on, and without it the skills won't work.
 
-https://joompulse.com
+> **Get access and details:** https://joompulse.com/mcp-connector
+
+**1. Enable Developer Mode**
+Open **Settings → Connectors → Advanced** and turn **Developer Mode** on.
+
+![Enable Developer Mode](assets/mcp/devmod.png)
+
+**2. Create the JoomPulse app**
+In **Connectors**, click **Create App** and set:
+- **Name:** JoomPulse
+- **Authentication:** OAuth
+- **Connection URL:** `https://joompulse.com/mcp`
+
+![Create the JoomPulse app](assets/mcp/config.png)
+
+**3. Sign in with JoomPulse**
+Save the app, then click **Sign in with JoomPulse** to authorize it and start using the skills from chat.
+
+![Sign in with JoomPulse](assets/mcp/auth.png)
 
 ## Skills
 
