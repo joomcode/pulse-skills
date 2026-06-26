@@ -10,9 +10,9 @@ description: >
   "subcategorias em crescimento", "nichos que mais crescem nesta categoria",
   "categorias profundas em alta". Sales and revenue are JoomPulse estimates, not
   real transactions. For one category's opportunity index, use the
-  opportunity-index skill; for week-over-week category aggregates, use the
-  category-monitor skill; for new products inside a category, use the new-products
-  skill.
+  category-opportunity-index skill; for comparing category aggregates against a
+  user-supplied previous snapshot, use the category-monitor skill; for new products
+  inside a category, use the new-growing-products-in-category skill.
 ---
 
 # Growing Leaf Category Tracker
@@ -24,10 +24,10 @@ estimated revenue. It helps a seller who already knows a broad area decide which
 specific niche to move into next.
 
 This is a niche-discovery snapshot, not a tracker over time. For a single
-category's opportunity index and market size, use the opportunity-index skill.
-To watch a category's aggregate numbers change week over week, use the
-category-monitor skill. To find specific new products inside a category, use the
-new-products skill.
+category's opportunity index and market size, use the category-opportunity-index
+skill. To compare a category's aggregate numbers against a user-supplied previous
+snapshot, use the category-monitor skill. To find specific new products inside a
+category, use the new-growing-products-in-category skill.
 
 ## Prerequisites
 
