@@ -16,8 +16,8 @@ description: >
   vendedores da categoria", "maiores lojas da categoria", "ranking de vendedores
   por receita", "quem subiu ou caiu na categoria", "quem mais vende nessa
   categoria". Sales and revenue are JoomPulse estimates, not real transactions. To
-  monitor one seller over time, use the seller-overview tracker; to rank brands
-  rather than sellers, use the brand-position tracker.
+  monitor one seller over time, use the seller-overview-tracker skill; to rank
+  brands rather than sellers, use the top-brand-position-tracker skill.
 ---
 
 # Top Sellers In Category
@@ -35,8 +35,8 @@ leaderboard that this skill produced for the same category, it compares the two
 and reports each seller's movement (rose / fell / new) plus the biggest movers.
 **The baseline is the table you supply — there is no hidden session memory.**
 
-To monitor a single named seller over time, use the seller-overview tracker. To
-rank brands rather than sellers, use the brand-position tracker.
+To monitor a single named seller over time, use the seller-overview-tracker skill.
+To rank brands rather than sellers, use the top-brand-position-tracker skill.
 
 ## Prerequisites
 
