@@ -36,23 +36,21 @@ To use these skills you first need to connect the **JoomPulse MCP** — it provi
 
 > **Get access and details:** https://joompulse.com/mcp-connector
 
-**1. Enable Developer Mode**
-Open **Settings → Connectors → Advanced** and turn **Developer Mode** on.
+**1. Open Claude settings**
+Launch the app or open **claude.ai** and go to **Settings → Connectors**.
 
-![Enable Developer Mode](assets/mcp/devmod.png)
+![Open Claude settings → Connectors](assets/mcp/connector.png)
 
-**2. Create the JoomPulse app**
-In **Connectors**, click **Create App** and set:
-- **Name:** JoomPulse
-- **Authentication:** OAuth
-- **Connection URL:** `https://joompulse.com/mcp`
+**2. Add the custom connector**
+Click **+ → Add custom connector**, name it **JoomPulse**, and paste the URL:
+`https://joompulse.com/mcp`
 
-![Create the JoomPulse app](assets/mcp/config.png)
+![Add the custom connector](assets/mcp/config.png)
 
-**3. Sign in with JoomPulse**
-Save the app, then click **Sign in with JoomPulse** to authorize it and start using the skills from chat.
+**3. Connect and sign in**
+Click **Add → Connect**, sign in with your JoomPulse account — you're ready to delegate tasks from chat.
 
-![Sign in with JoomPulse](assets/mcp/auth.png)
+![Connect and sign in](assets/mcp/auth.png)
 
 ## Skills
 
