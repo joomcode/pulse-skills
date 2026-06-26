@@ -8,7 +8,20 @@ sellers and teams.
 
 ## Install
 
-In Claude Code, add the marketplace and install the plugin:
+### Via link
+1. Copy this repository's link from your browser.
+2. Paste the link into Claude chat or Claude Cowork.
+3. Tell Claude: "Download all skills from this repository." Claude will give you `.zip` files.
+4. Import them in the **Customize** tab → **Skills** → **"+"** button → **Add new skill** → **Upload skill**, then choose the `.zip` files from your file manager.
+
+![Open the Customize tab](assets/install/customize.png)
+
+![Open Skills](assets/install/skills.png)
+
+![Create skill, then Upload a skill and choose your .zip files](assets/install/add_new_skill.png)
+
+### Via Claude terminal
+If you have the Claude terminal installed, run these commands in it one at a time:
 
 ```bash
 /plugin marketplace add joomcode/pulse-skills
@@ -17,12 +30,29 @@ In Claude Code, add the marketplace and install the plugin:
 
 After installation, start a new session so the skill metadata is loaded.
 
-## Prerequisites
+## Connect the JoomPulse MCP (required)
 
-The skills in this repository require JoomPulse MCP access. For product context,
-account setup, and access requests, use the public JoomPulse site:
+To use these skills you first need to connect the **JoomPulse MCP** — it provides the live market data they run on, and without it the skills won't work.
 
-https://joompulse.com
+> **Get access and details:** https://joompulse.com/mcp-connector
+
+**1. Enable Developer Mode**
+Open **Settings → Connectors → Advanced** and turn **Developer Mode** on.
+
+![Enable Developer Mode](assets/mcp/devmod.png)
+
+**2. Create the JoomPulse app**
+In **Connectors**, click **Create App** and set:
+- **Name:** JoomPulse
+- **Authentication:** OAuth
+- **Connection URL:** `https://joompulse.com/mcp`
+
+![Create the JoomPulse app](assets/mcp/config.png)
+
+**3. Sign in with JoomPulse**
+Save the app, then click **Sign in with JoomPulse** to authorize it and start using the skills from chat.
+
+![Sign in with JoomPulse](assets/mcp/auth.png)
 
 ## Skills
 
