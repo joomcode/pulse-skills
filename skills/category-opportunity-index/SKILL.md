@@ -11,9 +11,10 @@ description: >
   "how big is this market", and the pt-BR equivalents "qual o índice de
   oportunidade", "vale a pena entrar nessa categoria", "tamanho de mercado da
   categoria". Sales and revenue are JoomPulse estimates, not real transactions.
-  For ranking the sellers in a category, use the top-sellers skill; for trending
-  search terms, use the top-keywords skill; for week-over-week category
-  aggregates, use the category-monitor skill.
+  For ranking the sellers in a category, use the top-sellers-in-category skill; for
+  trending search terms, use the top-keywords-in-my-category skill; for comparing
+  category aggregates against a user-supplied previous snapshot, use the
+  category-monitor skill.
 ---
 
 # Category Opportunity Index
@@ -27,10 +28,11 @@ interprets the opportunity level together with how concentrated the market is
 (monopolization) and which way it is growing.
 
 This is a point-in-time snapshot, not a tracker. To rank the sellers inside a
-category, use the top-sellers skill. For the trending search terms shoppers use
-in a category, use the top-keywords skill. To watch a category's aggregates
-change week over week, use the category-monitor skill. This skill answers "how
-attractive is this category right now?" for a category the user names.
+category, use the top-sellers-in-category skill. For the trending search terms
+shoppers use in a category, use the top-keywords-in-my-category skill. To compare
+a category's aggregates against a user-supplied previous snapshot, use the
+category-monitor skill. This skill answers "how attractive is this category right
+now?" for a category the user names.
 
 ## Prerequisites
 
