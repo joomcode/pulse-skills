@@ -37,7 +37,7 @@ To use these skills you first need to connect the **JoomPulse MCP** — it provi
 > **Get access and details:** https://joompulse.com/mcp-connector
 
 **1. Open Claude settings**
-Launch the app or open **claude.ai** and go to **Settings → Connectors**.
+Launch the app or open **claude.ai** and go to **Settings → Connectors**, or use the [Direct link to add connector](https://claude.ai/customize/connectors?modal=add-custom-connector).
 
 ![Open Claude settings → Connectors](assets/mcp/connector.png)
 
