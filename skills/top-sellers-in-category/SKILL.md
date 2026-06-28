@@ -1,23 +1,17 @@
 ---
 name: top-sellers-in-category
 description: >
-  Ranks the top sellers in one Mercado Livre (Brasil) category by estimated
-  average monthly revenue, using JoomPulse, and returns a downloadable leaderboard
-  — for each seller: estimated average monthly sales and revenue, completed sales
-  over the last 365 days, cancellation rate, sales trend, brands, product
-  distribution (all and with sales), international shipping, and classic and
-  premium listing counts, with a JoomPulse link per seller. It can also track how
-  the ranking moved: supply a previous-period leaderboard this skill produced for
-  the same category and it shows each seller's movement (rose / fell / new) plus
-  the biggest movers. Use it to see who the biggest stores in a category are and
-  how that ranking is shifting. Triggers include: "top sellers in this category",
-  "biggest stores in a category", "rank sellers by revenue", "who moved up or down
-  in this category", "track top sellers", and the pt-BR equivalents "principais
-  vendedores da categoria", "maiores lojas da categoria", "ranking de vendedores
-  por receita", "quem subiu ou caiu na categoria", "quem mais vende nessa
-  categoria". Sales and revenue are JoomPulse estimates, not real transactions. To
-  monitor one seller over time, use the seller-overview-tracker skill; to rank
-  brands rather than sellers, use the top-brand-position-tracker skill.
+  Ranks the top sellers in one Mercado Livre (Brasil) category by estimated average monthly
+  revenue via JoomPulse, and returns a downloadable leaderboard — per seller: estimated
+  monthly sales and revenue, 365-day completed sales, cancellation rate, sales trend, brands,
+  product counts, international shipping, and listing-type counts, with a JoomPulse link each.
+  It can also track how the ranking moved: supply a previous-period leaderboard for the same
+  category and it shows each seller's movement (rose / fell / new) plus the biggest movers.
+  Triggers: "top sellers in this category", "biggest stores in a category", "rank sellers by
+  revenue", and the pt-BR "principais vendedores da categoria", "maiores lojas da categoria",
+  "quem mais vende nessa categoria". Sales and revenue are JoomPulse estimates, not real
+  transactions. To monitor one seller over time use the seller-overview-tracker skill; to rank
+  brands use the top-brand-position-tracker skill.
 ---
 
 # Top Sellers In Category

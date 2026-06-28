@@ -1,20 +1,18 @@
 ---
 name: uncontested-niche-finder
 description: >
-  Finds low-competition niche products on Mercado Livre (Brasil) — active
-  listings in deep sub-categories (deeper than the third level) of a chosen
-  category that have no platinum seller at all, surfaced via JoomPulse. Use it when a
-  seller wants uncontested niches, gaps without strong incumbents, or to know
-  where they can enter without fighting a dominant platinum seller. Triggers in
-  English include: "uncontested niche", "low-competition products", "categories
-  without platinum sellers", "find a niche to enter". Triggers in pt-BR include:
-  "nicho sem concorrência", "produtos sem vendedor platinum", "nicho pouco
-  disputado", "onde entrar sem briga", "subcategorias sem platinum". It returns
-  one table of niche products, each with a competition signal (number of sellers)
-  and a JoomPulse link. Sales and revenue are JoomPulse estimates, not real
-  transactions; price, rating, and reviews are real history. For one product and
-  its competitors, use the ml-product-analysis skill; for fast-growing deep
-  categories rather than products, use the growing-leaf-category-tracker skill.
+  Finds low-competition niche products on Mercado Livre (Brasil) — active listings in deep
+  sub-categories (deeper than the third level) of a chosen category that have no platinum
+  seller at all, surfaced via JoomPulse. Use it when a seller wants uncontested niches, gaps
+  without strong incumbents, or where to enter without fighting a dominant platinum seller.
+  Triggers (EN): "uncontested niche", "low-competition products", "categories without platinum
+  sellers", "find a niche to enter"; (pt-BR): "nicho sem concorrência", "produtos sem vendedor
+  platinum", "nicho pouco disputado", "subcategorias sem platinum". It returns one table of
+  niche products, each with a competition signal (number of sellers) and a JoomPulse link.
+  Sales and revenue are JoomPulse estimates, not real transactions; price, rating, and reviews
+  are real history. For one product and its competitors use the ml-product-analysis skill; for
+  fast-growing deep categories rather than products use the growing-leaf-category-tracker
+  skill.
 ---
 
 # Uncontested Niche Finder

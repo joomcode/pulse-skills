@@ -1,22 +1,18 @@
 ---
 name: unbranded-products-in-category
 description: >
-  Finds products with no brand (unbranded / no-name / generic) in one Mercado
-  Livre (Brasil) category, using JoomPulse — an opening to enter the category with
-  your own brand / private label, since buyers there are not anchored to a brand
-  name. Asks the user for a category, lists the active listings that have no brand,
-  ranked by estimated weekly demand, and returns a product table with price,
-  estimated weekly sales and revenue, rating, reviews, time on air, shipping,
-  listing type and seller medal, plus a JoomPulse link per item. Use it when a
-  seller wants white-label / private-label openings. Triggers include: "unbranded
-  products", "no-name products in category", "products without a brand",
-  "private-label opportunities", and the pt-BR equivalents "produtos sem marca",
-  "genéricos que vendem", "oportunidade de marca própria". Sales and revenue are
-  JoomPulse estimates, not real transactions. NOT for ranking the brands in a
-  category (use the top-brand-position-tracker skill), brand-new listings (use the
-  new-growing-products-in-category skill), high-demand low-rated products (use the
-  high-demand-low-quality-finder skill), or niches without platinum sellers (use
-  the uncontested-niche-finder skill).
+  Finds products with no brand (unbranded / no-name / generic) in one Mercado Livre (Brasil)
+  category via JoomPulse — an opening to enter with your own brand / private label, since
+  buyers there aren't anchored to a brand name. Asks for a category, lists the active no-brand
+  listings ranked by estimated weekly demand, and returns a product table (price, estimated
+  weekly sales and revenue, rating, reviews, time on air, shipping, listing type, seller
+  medal) with a JoomPulse link per item. Triggers: "unbranded products", "products without a
+  brand", "private-label opportunities", and the pt-BR "produtos sem marca", "genéricos que
+  vendem", "oportunidade de marca própria". Sales and revenue are JoomPulse estimates, not
+  real transactions. NOT for ranking brands (use top-brand-position-tracker), brand-new
+  listings (use new-growing-products-in-category), high-demand low-rated products (use high-
+  demand-low-quality-finder), or niches without platinum sellers (use uncontested-niche-
+  finder).
 ---
 
 # Unbranded Products In Category
