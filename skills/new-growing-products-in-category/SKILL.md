@@ -8,8 +8,8 @@ description: >
   them as a product table with a JoomPulse link per listing. Use it when a seller
   wants fresh, promising entrants in a niche. Triggers include: "new products in
   category", "what's launching and already selling", "recent best-sellers in
-  <category>", and the pt-BR equivalents "produtos novos na categoria", "novos
-  anúncios que já vendem", "lançamentos em alta em <categoria>". Mercado Livre
+  my category", and the pt-BR equivalents "produtos novos na categoria", "novos
+  anúncios que já vendem", "lançamentos em alta na minha categoria". Mercado Livre
   (Brasil) only; sales and revenue are JoomPulse estimates, not real transactions,
   while price, rating, and review count are real history. For weak-rated but
   well-selling products to beat, use the high-demand low-quality skill; for
