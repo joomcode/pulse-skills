@@ -1,22 +1,17 @@
 ---
 name: top-brand-position-tracker
 description: >
-  Ranks the brands within one Mercado Livre (Brasil) category by estimated weekly
-  revenue and tracks how each brand's position in that ranking changes between
-  periods, using JoomPulse data. Each run builds today's brand-ranking table for
-  the category and offers it as a downloadable table; to see how positions moved,
-  the user sends a brand table from a previous period and the skill shows each
-  brand's position movement (rose, fell, new, or out). The baseline is whatever
-  table the user supplies — there is no hidden session memory. Use it when a seller
-  wants to know who the top brands in a category are, which brands are rising or
-  falling, or to monitor brand share over time. Triggers include: "top brands in
-  this category", "which brands are growing", "brand ranking", "track brand
-  positions", and the pt-BR equivalents "principais marcas da categoria", "ranking
-  de marcas", "quais marcas estão crescendo", "acompanhar posição das marcas".
-  Mercado Livre (Brasil) only; sales and revenue are JoomPulse estimates, not real
-  transactions. For ranking sellers (shops) rather than brands, use the
-  seller-ranking skills; for category-level market size and opportunity, use the
-  category opportunity skill.
+  Ranks the brands within one Mercado Livre (Brasil) category by estimated weekly revenue and
+  tracks how each brand's position changes between periods, using JoomPulse. Each run builds
+  today's brand-ranking table and offers it for download; to see how positions moved, the user
+  sends a brand table from a previous period and the skill shows each brand's movement (rose,
+  fell, new, or out). The baseline is whatever table the user supplies — no hidden session
+  memory. Use it to see the top brands in a category and which are rising or falling.
+  Triggers: "top brands in this category", "which brands are growing", "brand ranking", and
+  the pt-BR "principais marcas da categoria", "ranking de marcas", "quais marcas estão
+  crescendo". Mercado Livre (Brasil) only; sales and revenue are JoomPulse estimates, not real
+  transactions. To rank sellers (shops) rather than brands use the top-sellers-in-category
+  skill; for category market size use the category-opportunity-index skill.
 ---
 
 # Top brand position tracker

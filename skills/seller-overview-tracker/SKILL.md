@@ -1,21 +1,17 @@
 ---
 name: seller-overview-tracker
 description: >
-  Snapshot tracker for one Mercado Livre (Brasil) seller, using JoomPulse —
-  estimated monthly revenue and sales, listing count, sales trend, reputation,
-  seller medal, categories covered, and cancellation rate. Each run builds today's
-  snapshot table for the seller and offers it as a downloadable table; to see what
-  changed, the user sends the seller's table from a previous period and the skill
-  shows the metric-by-metric difference (old → new). The baseline is whatever table
-  the user supplies — there is no hidden session memory. Use it when a user wants to
-  track one specific seller over time and "what changed for this seller". Triggers
-  include: "track this seller", "monitor this store", "what changed for this
-  seller", "compare this seller with last period", and the pt-BR equivalents
-  "monitorar este vendedor", "acompanhar esta loja", "o que mudou nesse vendedor",
-  "comparar este vendedor com o período anterior". Sales and revenue are JoomPulse
-  estimates, not real transactions. For ranking many sellers in a category and
-  tracking how that ranking moves, use the top-sellers-in-category skill; for
-  analyzing a single product, use the single-product analysis skill. Mercado Livre (Brasil) only.
+  Snapshot tracker for one Mercado Livre (Brasil) seller via JoomPulse — estimated monthly
+  revenue and sales, listing count, sales trend, reputation, seller medal, categories covered,
+  and cancellation rate. Each run builds today's snapshot table and offers it for download; to
+  see what changed, the user sends the seller's table from a previous period and the skill
+  shows the metric-by-metric difference (old → new). The baseline is whatever table the user
+  supplies — no hidden session memory. Use it to track one specific seller over time.
+  Triggers: "track this seller", "monitor this store", "what changed for this seller",
+  "compare this seller with last period", and the pt-BR "monitorar este vendedor", "acompanhar
+  esta loja", "o que mudou nesse vendedor". Sales and revenue are JoomPulse estimates, not
+  real transactions. To rank many sellers in a category and track how that ranking moves, use
+  the top-sellers-in-category skill. Mercado Livre (Brasil) only.
 ---
 
 # Seller Overview Tracker

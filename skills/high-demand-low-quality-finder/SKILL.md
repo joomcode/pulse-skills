@@ -1,20 +1,17 @@
 ---
 name: high-demand-low-quality-finder
 description: >
-  Finds Mercado Livre (Brasil) products in one category that have high demand but
-  a low rating — listings that sell well yet score at or below a rating threshold
-  the user chooses, an opening to enter with a better offer. Use it when a seller
-  wants weak-rated but well-selling products to beat. The skill asks for a category
-  and a rating threshold, then returns the matching active listings ranked by
-  demand, using JoomPulse market data. Triggers include: "high demand low rating
-  products", "low quality opportunities", "products I can beat", and the pt-BR
-  equivalents "produtos com muita demanda e nota baixa", "oportunidades de baixa
-  qualidade", "produtos mal avaliados que vendem", "onde entrar com oferta melhor".
-  Sales and revenue are JoomPulse estimates, not real transactions; price, rating,
-  and review count are real history. For brand-new listings in a category, use the
-  new-and-growing-products skill; for niches without strong incumbents, use the
-  uncontested-niche skill; for sizing up a single product and its competitors, use
-  the single-product analysis skill.
+  Finds Mercado Livre (Brasil) products in one category that have high demand but a low rating
+  — listings that sell well yet score at or below a rating threshold the user chooses, an
+  opening to enter with a better offer. Use it when a seller wants weak-rated but well-selling
+  products to beat. The skill asks for a category and a rating threshold, then returns the
+  matching active listings ranked by demand, using JoomPulse market data. Triggers: "high
+  demand low rating products", "low quality opportunities", "products I can beat", and the pt-
+  BR "produtos com muita demanda e nota baixa", "oportunidades de baixa qualidade", "produtos
+  mal avaliados que vendem". Sales and revenue are JoomPulse estimates, not real transactions;
+  price, rating, and reviews are real history. For brand-new listings use the new-growing-
+  products-in-category skill; for niches without strong incumbents use the uncontested-niche-
+  finder skill; for one product and its competitors use the ml-product-analysis skill.
 ---
 
 # High-Demand, Low-Quality Finder

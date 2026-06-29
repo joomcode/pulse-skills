@@ -1,19 +1,17 @@
 ---
 name: category-monitor
 description: >
-  Monitor of one Mercado Livre (Brasil) category's aggregate health, using JoomPulse — estimated
-  sales, number of products, catalog products, active sellers, the seller-medal distribution, and the
-  monopolization level. Each run builds today's snapshot table for the category and offers it as a
-  downloadable table; to see what changed, the user sends the table from a previous period and the
-  skill shows the metric-by-metric difference (old → new). The baseline is whatever table the user
-  supplies — there is no hidden session memory. It can also be pointed at a single listing or a
-  catalog product, but defaults to the whole category. Use it when a seller wants to track a
-  category's totals over time. Triggers include: "monitor this category", "what changed in this
-  category", "track category sales and sellers", "compare this category with last period", and the
-  pt-BR equivalents "monitorar esta categoria", "o que mudou na categoria", "comparar a categoria com
-  o período anterior", "variação de vendas e vendedores da categoria". Sales and revenue are JoomPulse
-  estimates, not real transactions. To track one named product over time, use the product-change-monitor
-  skill; for a one-shot opportunity / market-size snapshot, use the category-opportunity-index skill.
+  Monitors one Mercado Livre (Brasil) category's aggregate health via JoomPulse — estimated
+  sales, number of products and catalog products, active sellers, the seller-medal
+  distribution, and the monopolization level. Each run builds today's snapshot table and
+  offers it for download; to see what changed, the user sends a table from a previous period
+  and the skill shows the metric-by-metric difference. The baseline is whatever table the user
+  supplies — no hidden session memory. Triggers: "monitor this category", "what changed in
+  this category", "track category sales and sellers", and the pt-BR "monitorar esta
+  categoria", "o que mudou na categoria", "comparar a categoria com o período anterior". Sales
+  and revenue are JoomPulse estimates, not real transactions. To track one named product over
+  time use the product-change-monitor skill; for a one-shot market-size or opportunity
+  snapshot use the category-opportunity-index skill.
 ---
 
 # Category Monitor
