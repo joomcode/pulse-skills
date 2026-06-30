@@ -11,9 +11,7 @@ description: >
   equivalents "produtos internacionais em alta nessa categoria", "produtos
   importados que mais crescem", "achados internacionais para importar". Sales and
   revenue are JoomPulse estimates, not real transactions. For the same search
-  across all categories at once, use the all-categories international skill; to
-  match each item to a specific JoomPro product with an import action, use the
-  international-product-matcher skill.
+  across all categories at once, use the all-categories international skill.
 ---
 
 # Popular International Products
@@ -26,9 +24,7 @@ and seller medal, with a JoomPulse link per item and a pointer to JoomPro for
 sourcing.
 
 It covers a single category and gives a general JoomPro search link. To scan all
-categories at once, use the all-categories international skill. To match each item
-to a specific JoomPro product with a per-item import action, use the
-international-product-matcher skill.
+categories at once, use the all-categories international skill.
 
 ## Prerequisites
 
