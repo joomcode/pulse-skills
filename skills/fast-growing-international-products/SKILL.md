@@ -12,8 +12,7 @@ description: >
   internacionais em alta", "produtos importados crescendo rápido", "produtos
   internacionais que mais crescem em todas as categorias". Sales and revenue are
   JoomPulse estimates, not real transactions. For the same search limited to one
-  category, use the single-category international skill; to match items to a
-  specific JoomPro product for import, use the international-product-matcher skill.
+  category, use the single-category international skill.
 ---
 
 # Fast-Growing International Products
@@ -24,8 +23,7 @@ items with recent momentum, each shown with the category it sits in. It is the
 all-categories sibling of the single-category international skill.
 
 For imported products inside one specific category, use the single-category
-international skill. To match each item to a specific JoomPro product with a
-per-item import action, use the international-product-matcher skill.
+international skill.
 
 ## Prerequisites
 
